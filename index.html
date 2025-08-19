@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annual Day Celebration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation and Home Video -->
+    <div class="navbar">
+        <button onclick="showTechnical()">Technical</button>
+        <button onclick="showNonTechnical()">Non-Technical</button>
+        <button onclick="showGuests()">Guests</button>
+    </div>
+
+    <div id="home-page" class="home-page">
+        <video autoplay muted loop class="background-video">
+            <source src="video.mp4" type="video/mp4">
+        </video>
+        <div class="welcome-message">
+            <h1>Welcome to Annual Day Celebration</h1>
+        </div>
+    </div>
+
+    <!-- Content for Technical, Non-Technical, and Registration -->
+    <div id="technical-page" class="content-page" style="display: none;">
+        <h2 class="section-title">Technical Events</h2>
+        <div class="cards">
+            <div class="card" onclick="showRegistration('JAM')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRUtj-PHYQZWl2lWkbgeNEd-b7tJuwc9E7CA&s.jpg" alt="JAM">
+                <p>JAM</p>
+            </div>
+            <div class="card" onclick="showRegistration('Quiz')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNU2RKT6UPcAKmhgVwUHCvd7o_pb9XZqMx1A&s.jpg" alt="Quiz">
+                <p>Quiz</p>
+            </div>
+            <div class="card" onclick="showRegistration('Idea Presentation')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvAPJN3WsZk8dMavWK-AvVccT80C3eXN6UhOomF-8HeE21xauzYOrQjaF0BjqeUZc5Loo&usqp=CAU.jpg" alt="Idea Presentation">
+                <p>Idea Presentation</p>
+            </div>
+            <div class="card" onclick="showRegistration('Poster Presentation')">
+                <img src="https://cdn2.slidemodel.com/wp-content/uploads/01-poster-presentation-cover.jpg" alt="Poster Presentation">
+                <p>Poster Presentation</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="non-technical-page" class="content-page" style="display: none;">
+        <h2 class="section-title">Non-Technical Events</h2>
+        <div class="cards">
+            <div class="card" onclick="showRegistration('Singing')">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/029/707/834/small/stylishgraphy-of-folklore-girl-singing-to-a-microphone-on-stage-ai-generative-photo.jpg" alt="Singing">
+                <p>Singing</p>
+            </div>
+            <div class="card" onclick="showRegistration('Dancing')">
+                <img src="https://images.pexels.com/photos/175658/pexels-photo-175658.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500.jpg" alt="Dancing">
+                <p>Dancing</p>
+            </div>
+            <div class="card" onclick="showRegistration('Drama')">
+                <img src="https://www.shutterstock.com/image-vector/children-play-drama-on-stage-600nw-1247131363.jpg" alt="Drama">
+                <p>Drama</p>
+            </div>
+            <div class="card" onclick="showRegistration('Standup Comedian')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiwDlfk1CuH_rR6eEjMDW5PORVbOJPRECDeA&s.jpg" alt="Standup Comedian">
+                <p>Standup Comedian</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="guests-page" class="content-page" style="display: none;">
+    <h2 class="section-title">Guests</h2>
+    <div class="guests">
+        <div class="guest">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsdn9KuLVjWpT7Y--hMDuZVDm0B_i_RA_-wA&s.jpg" alt="SID SRIRAM">
+            <p>SID SRIRAM</p>
+        </div>
+        <div class="guest">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjroecRRJULeBRtCQdEUon5wR4fTQ8sns70A&s.jpg" alt="MRUNAL THAKUR">
+            <p>MRUNAL THAKUR</p>
+        </div>
+    </div>
+</div>
+
+    <!-- Registration Form -->
+    <div id="registration-page" class="registration-page" style="display: none;">
+        <h2>Register for Event: <span id="event-name"></span></h2>
+        <form id="registration-form">
+            <label>Name:</label>
+            <input type="text" id="name" required><br>
+            <label>Roll No:</label>
+            <input type="text" id="rollno" required><br>
+            <label>Branch:</label>
+            <input type="text" id="branch" required><br>
+            <label>Phone Number:</label>
+            <input type="text" id="phone" required><br>
+            <label>Email:</label>
+            <input type="email" id="email" required><br>
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
